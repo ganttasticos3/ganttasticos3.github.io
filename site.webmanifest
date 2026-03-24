@@ -1,6 +1,6 @@
 {
- "short_name": "Formulario PWA",
- "name": "PWA con Formulario",
+ "short_name": "Push",
+ "name": "Notificaciones Push",
  "id": "/index.html",
  "start_url": "/index.html",
  "display": "standalone",
@@ -9,7 +9,7 @@
  "display_override": [
   "window-controls-overlay"
  ],
- "description": "PWA con componentes de Material Design.",
+ "description": "PWA con notificaciones push y componentes de Material Design.",
  "screenshots": [
   {
    "src": "/img/screenshot_horizontal.png",
