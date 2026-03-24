@@ -1,105 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" class="light dark">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <title>Ayuda - Notificaciones Push</title>
 
- <meta charset="UTF-8">
+    <script type="module" src="js/lib/registraServiceWorker.js"></script>
+    <script type="module" src="js/lib/manejaErrores.js"></script>
 
- <title>Ayuda - PWA con Formulario</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#fffbfe" />
+    <link rel="icon" sizes="32x32" href="favicon.ico" />
+    <link rel="manifest" href="site.webmanifest" />
+    <script src="ungap/custom-elements.js"></script>
 
- <script type="module" src="js/lib/registraServiceWorker.js"></script>
- <script type="module" src="js/lib/manejaErrores.js"></script>
+    <script type="module" src="js/lib/custom/md-app-bar.js"></script>
+    <script type="module" src="js/nav-tab-fixed.js"></script>
 
- <meta name="viewport" content="width=device-width">
- <meta name="theme-color" content="#fffbfe">
- <link rel="icon" sizes="32x32" href="favicon.ico">
- <link rel="manifest" href="site.webmanifest">
- <script src="ungap/custom-elements.js"></script>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/transicion_pestanas.css" />
+    <link rel="stylesheet" href="css/md-headline.css" />
+    <link rel="stylesheet" href="css/md-tab.css" />
+    <link rel="stylesheet" href="css/material-symbols-outlined.css" />
+    <link rel="stylesheet" href="css/md-list.css" />
+  </head>
 
- <script type="module" src="js/lib/custom/md-app-bar.js"></script>
- <script type="module" src="js/nav-tab-fixed.js"></script>
+  <body>
+    <md-app-bar adicional="tab">
+      <h1>Ayuda</h1>
+    </md-app-bar>
 
- <link rel="stylesheet" href="css/estilos.css">
- <link rel="stylesheet" href="css/transicion_pestanas.css">
- <link rel="stylesheet" href="css/md-headline.css">
- <link rel="stylesheet" href="css/md-tab.css">
- <link rel="stylesheet" href="css/material-symbols-outlined.css">
- <link rel="stylesheet" href="css/md-list.css">
+    <nav-tab-fixed id="tab"></nav-tab-fixed>
 
-</head>
+    <section>
+      <ul class="md-list">
+        <li class="md-two-line">
+          <span class="headline"> Título </span>
+          <span class="supporting"> Sistema de Notificaciones Push </span>
+        </li>
+        <li class="md-two-line">
+          <span class="headline"> Descripción </span>
+          <span class="supporting">
+            Aplicación web progresiva que permite suscribirse y enviar
+            notificaciones push a múltiples dispositivos en tiempo real.
+          </span>
+        </li>
+        <li class="md-two-line">
+          <span class="headline"> Autor </span>
+          <span class="supporting">
+            BALTAZAR HERNANDEZ URIEL<br />
+            CORDOVA MARTINEZ HECTOR<br />
+            MORALES LOZA AMAIRANI ITATI<br />
+            POZOS FRAGOSO ROBERTO<br />
+            RAMIREZ GONZALEZ VANESSSA WENDOLYN<br />
+            SALAZAR MENDIETA JESUS ANGEL
+          </span>
+        </li>
+        <li class="md-two-line">
+          <span class="headline"> Derechos de autor </span>
+          <span class="supporting">
+            &copy; 2026 Sistema de Notificaciones Push
+          </span>
+        </li>
+        <li class="md-three-line">
+          <span class="headline">
+            Este software usa la librería para notificaciones push
+          </span>
+          <span class="supporting">
+            Implementación basada en estándares de Web Push y Service Workers
+            para envío de notificaciones en navegadores modernos.
+          </span>
+        </li>
+        <li>
+          <a
+            class="md-three-line"
+            target="_blank"
+            rel="noreferrer"
+            href="https://fonts.google.com/icons"
+          >
+            <span class="headline"> También usa Material Symbols </span>
+            <span class="supporting">
+              Desarrollada por Google bajo licencia Apache 2.0
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-<body>
-
- <md-app-bar adicional="tab">
-
-  <h1>Ayuda</h1>
-
- </md-app-bar>
-
- <nav-tab-fixed id="tab"></nav-tab-fixed>
-
- <section>
-
-  <ul class="md-list">
-   <li class="md-two-line">
-    <span class="headline">
-     Título
-    </span>
-    <span class="supporting">
-     PWA con Material Design
-    </span>
-   </li>
-   <li class="md-two-line">
-    <span class="headline">
-     Descripción
-    </span>
-    <span class="supporting">
-     Ejemplos de vistas móviles.
-    </span>
-   </li>
-   <li class="md-two-line">
-    <span class="headline">
-     Autor
-    </span>
-    <span class="supporting">
-     Gilberto Pacheco Gallegos
-    </span>
-   </li>
-   <li class="md-two-line">
-    <span class="headline">
-     Derechos de autor
-    </span>
-    <span class="supporting">
-     &copy; 2025 Gilberto Pacheco Gallegos
-    </span>
-   </li>
-   <li class="md-three-line">
-    <span class="headline">
-     Este software usa la librería para PWA
-    </span>
-    <span class="supporting">
-     Esta obra de Gilberto Pacheco Gallegos está bajo una
-     <a target="_blank" rel="license noreferrer"
-       href="http://creativecommons.org/licenses/by/4.0/">
-      Licencia Creative Commons Atribución 4.0 Internacional</a></span>
-   </li>
-   <li>
-    <a class="md-three-line" target="_blank" rel=”noreferrer”
-      href="https://fonts.google.com/icons">
-     <span class="headline">
-      También usa Material Symbols
-     </span>
-     <span class="supporting">
-      Desarrollada por Google bajo licencia Apache 2.0
-     </span>
-    </a>
-   </li>
-  </ul>
-
- </section>
-
- <nav-drw></nav-drw>
-
-</body>
-
+    <nav-drw></nav-drw>
+  </body>
 </html>
