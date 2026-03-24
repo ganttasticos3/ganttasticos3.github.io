@@ -23,7 +23,7 @@ $datos = json_decode(file_get_contents("php://input"), true);
 $texto =  $datos["mensaje"] ?? "Mensaje vacío";
 
 $mensaje = json_encode([
-    "title" => "Pentabyte 💬",
+    "title" => "Ganttasticos 💻",
     "body" => $texto
 ]);
 
