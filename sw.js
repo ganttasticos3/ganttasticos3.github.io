@@ -3,8 +3,7 @@
 const VERSION = "2.0";
 const CACHE = "pwamd";
 
-// 🔥 TU DOMINIO
-const URL_SERVIDOR = "https://pentabyte02-github-io-1.onrender.com";
+const URL_SERVIDOR = "https://ganttasticos3-github-io.onrender.com";
 
 const ARCHIVOS = [
   "ayuda.html",
