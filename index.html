@@ -28,9 +28,13 @@
   </head>
 
   <body>
-    <md-app-bar class="centered">
+    <!-- 👇 CAMBIO: se agregó adicional="tab" -->
+    <md-app-bar adicional="tab" class="centered">
       <h1>Notificaciones Push</h1>
     </md-app-bar>
+
+    <!-- 👇 NUEVO: barra de navegación -->
+    <nav-tab-fixed id="tab"></nav-tab-fixed>
 
     <section style="padding: 20px">
       <menu
