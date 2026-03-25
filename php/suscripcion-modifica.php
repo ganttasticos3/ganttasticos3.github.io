@@ -1,17 +1,14 @@
 <?php
-// 1. 👇 ESTO ES LO QUE ARREGLA EL ERROR "INCOMPATIBLE" (CORS)
 header("Access-Control-Allow-Origin: https://ganttasticos3.github.io");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
 
-// 2. 👇 Manejar la verificación previa del navegador
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     http_response_code(200);
     exit;
 }
 
-// --- Tu código original empieza aquí ---
-
+// Si sale error 500, el problema está en una de estas líneas:
 require_once __DIR__ . "/lib/manejaErrores.php";
 require_once __DIR__ . "/lib/devuelveCreated.php";
 require_once __DIR__ . "/lib/devuelveJson.php";
