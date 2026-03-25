@@ -60,8 +60,6 @@ const ARCHIVOS = [
   "img/maskable_icon_x512.png",
   "img/maskable_icon_x72.png",
   "img/maskable_icon_x96.png",
-  "img/screenshot_horizontal.png",
-  "img/screenshot_vertical.png",
   "img/Screenshot_horizontal_1.jpeg",
   "img/Screenshot_vertical_1.jpeg",
   "img/Screenshot_horizontal_2.jpeg",
