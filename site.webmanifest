@@ -12,28 +12,28 @@
  "description": "PWA con notificaciones push y componentes de Material Design.",
  "screenshots": [
   {
-   "src": "/img/screenshot_horizontal_1.jpeg",
+   "src": "/img/Screenshot_horizontal_1.jpeg",
    "sizes": "994x676",
    "type": "image/jpeg",
    "form_factor": "wide",
    "label": "PWA con Material Design y Notificaciones Push"
   },
   {
-   "src": "/img/screenshot_horizontal_2.jpeg",
+   "src": "/img/Screenshot_horizontal_2.jpeg",
    "sizes": "898x905",
    "type": "image/jpeg",
    "form_factor": "wide",
    "label": "PWA con Material Design y Notificaciones Push"
   },
   {
-   "src": "/img/screenshot_vertical_1.jpeg",
+   "src": "/img/Screenshot_vertical_1.jpeg",
    "sizes": "883x1600",
    "type": "image/jpeg",
    "form_factor": "narrow",
    "label": "PWA con Material Design y Notificaciones Push"
   },
   {
-   "src": "/img/screenshot_vertical_2.jpeg",
+   "src": "/img/Screenshot_vertical_2.jpeg",
    "sizes": "834x1600",
    "type": "image/jpeg",
    "form_factor": "narrow",
