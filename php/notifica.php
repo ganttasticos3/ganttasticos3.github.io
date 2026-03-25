@@ -43,15 +43,25 @@ foreach ($reportes as $reporte) {
     $endpoint = $reporte->getRequest()->getUri();
     $htmlEndpoint = htmlentities($endpoint);
     if ($reporte->isSuccess()) {
-        // Reporte de éxito.
+
         $reporteDeEnvios .= "<dt>$htmlEndpoint</dt><dd>Éxito</dd>";
     } else {
-        if ($reporte->isSubscriptionExpired()) {
+
+        $explicacion = $reporte->getReason();
+        $statusCode = $reporte->getResponse()?->getStatusCode();
+
+        // 🔥 eliminar tokens muertos o inválidos
+        if (
+            $reporte->isSubscriptionExpired() ||
+            $statusCode === 410 ||
+            $statusCode === 404 ||
+            $statusCode === 401
+        ) {
             suscripcionElimina($bd, $endpoint);
         }
-        // Reporte de fallo.
-        $explicacion = htmlentities($reporte->getReason());
-        $reporteDeEnvios .= "<dt>$endpoint</dt><dd>Fallo: $explicacion</dd>";
+
+        $explicacionHtml = htmlentities($explicacion);
+        $reporteDeEnvios .= "<dt>$htmlEndpoint</dt><dd>Fallo: $explicacionHtml</dd>";
     }
 }
 
