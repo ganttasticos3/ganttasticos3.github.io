@@ -161,7 +161,7 @@
             });
 
             const json = await resp.json();
-            reporte.innerHTML = json.reporte || "Notificación enviada con éxito.";
+            reporte.innerHTML = json.reporte.innerHTML || "Notificación enviada con éxito.";
         } catch (e) {
             muestraError(e);
             reporte.innerHTML = "Error al conectar con el servidor de Render.";
