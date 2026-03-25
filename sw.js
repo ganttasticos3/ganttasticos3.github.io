@@ -10,7 +10,6 @@ const ARCHIVOS = [
   "favicon.ico",
   "index.html",
   "site.webmanifest",
-  "purga.php",
 
   /* CSS */
   "css/baseline.css",
