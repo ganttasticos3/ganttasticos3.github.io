@@ -119,7 +119,7 @@ if (self instanceof ServiceWorkerGlobalScope) {
   });
 
   self.addEventListener("activate", () => {
-    console.log("SW activo 🔥");
+    console.log("SW activo");
   });
 }
 
