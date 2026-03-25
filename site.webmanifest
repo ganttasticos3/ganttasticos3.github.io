@@ -1,49 +1,42 @@
 {
- "short_name": "Push",
- "name": "Notificaciones Push",
- "id": "/index.html",
- "start_url": "/index.html",
- "display": "standalone",
- "theme_color": "#fffbfe",
- "background_color": "#fffbfe",
- "display_override": [
-  "window-controls-overlay"
- ],
- "description": "PWA con notificaciones push y componentes de Material Design.",
- "screenshots": [
-  {
-   "src": "/img/Screenshot_horizontal_1.jpeg",
-   "sizes": "994x676",
-   "type": "image/jpeg",
-   "form_factor": "wide",
-   "label": "PWA con Material Design y Notificaciones Push"
-  },
-  {
-   "src": "/img/Screenshot_horizontal_2.jpeg",
-   "sizes": "898x905",
-   "type": "image/jpeg",
-   "form_factor": "wide",
-   "label": "PWA con Material Design y Notificaciones Push"
-  },
-  {
-   "src": "/img/Screenshot_vertical_1.jpeg",
-   "sizes": "883x1600",
-   "type": "image/jpeg",
-   "form_factor": "narrow",
-   "label": "PWA con Material Design y Notificaciones Push"
-  },
-  {
-   "src": "/img/Screenshot_vertical_2.jpeg",
-   "sizes": "834x1600",
-   "type": "image/jpeg",
-   "form_factor": "narrow",
-   "label": "PWA con Material Design y Notificaciones Push"
-  }
- ],
- "icons": [
+  "name": "Equipo de Desarrollo PWA",
+  "short_name": "Equipo PWA",
+  "id": "/index.html",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay"],
+  "background_color": "#fffbfe",
+  "theme_color": "#fffbfe",
+  "description": "PWA con notificaciones ",
+
+  "screenshots": [
+    {
+      "src": "img/screenshot_horizontal.png",
+      "sizes": "1919x902",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "PWA renderizado"
+    },
+    {
+      "src": "img/screenshot_vertical.png",
+      "sizes": "496x794",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "PWA renderizado 2"
+    }
+  ],
+
+    "protocol_handlers": [
+    {
+      "protocol": "web+ganttasticos",
+      "url": "/index.html?url=%s"
+    }
+  ],
+
+   "icons":[
   {
     "purpose": "maskable",
-    "sizes": "2925x2925",
+    "sizes": "2730x2730",
     "src": "img/maskable_icon.png",
     "type": "image/png"
   },
@@ -89,9 +82,9 @@
     "src": "img/maskable_icon_x512.png",
     "type": "image/png"
   },
-  {
+    {
     "purpose": "any",
-    "sizes": "2925x2925",
+    "sizes": "2730x2730",
     "src": "img/maskable_icon.png",
     "type": "image/png"
   },
@@ -136,12 +129,6 @@
     "sizes": "512x512",
     "src": "img/maskable_icon_x512.png",
     "type": "image/png"
-  },
-  {
-   "purpose": "any",
-   "sizes": "2048x2048",
-   "src": "img/icono2048.png",
-   "type": "image/png"
   }
- ]
+]
 }
