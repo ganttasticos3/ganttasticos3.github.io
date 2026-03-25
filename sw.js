@@ -1,6 +1,6 @@
 /* Este archivo debe estar colocado en la carpeta raíz del sitio. */
 
-const VERSION = "3.0";
+const VERSION = "1.0.0";
 const CACHE = "pwamd";
 
 const URL_SERVIDOR = "https://ganttasticos3-github-io.onrender.com";
