@@ -1,6 +1,6 @@
 /* Este archivo debe estar colocado en la carpeta raíz del sitio. */
 
-const VERSION = "1.0.0";
+const VERSION = "3.5.2";
 const CACHE = "pwamd";
 
 const URL_SERVIDOR = "https://ganttasticos3-github-io.onrender.com";
@@ -62,10 +62,10 @@ const ARCHIVOS = [
   "img/maskable_icon_x96.png",
   "img/screenshot_horizontal.png",
   "img/screenshot_vertical.png",
-  "img/Screenshot_horizontal_1.png",
-  "img/Screenshot_vertical_1.png",
-  "img/Screenshot_horizontal_2.png",
-  "img/Screenshot_vertical_2.png",
+  "img/Screenshot_horizontal_1.jpeg",
+  "img/Screenshot_vertical_1.jpeg",
+  "img/Screenshot_horizontal_2.jpeg",
+  "img/Screenshot_vertical_2.jpeg",
 
   /* JS */
   "js/nav-tab-fixed.js",
