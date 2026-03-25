@@ -62,10 +62,10 @@ const ARCHIVOS = [
   "img/maskable_icon_x96.png",
   "img/screenshot_horizontal.png",
   "img/screenshot_vertical.png",
-  "img/screenshot_horizontal_1.png",
-  "img/screenshot_vertical_1.png",
-  "img/screenshot_horizontal_2.png",
-  "img/screenshot_vertical_2.png",
+  "img/Screenshot_horizontal_1.png",
+  "img/Screenshot_vertical_1.png",
+  "img/Screenshot_horizontal_2.png",
+  "img/Screenshot_vertical_2.png",
 
   /* JS */
   "js/nav-tab-fixed.js",
