@@ -103,7 +103,7 @@ const ARCHIVOS = [
 ];
 
 // ==============================
-// 🧠 SERVICE WORKER BASE
+// SERVICE WORKER BASE
 // ==============================
 
 if (self instanceof ServiceWorkerGlobalScope) {
@@ -140,7 +140,7 @@ async function llenaElCache() {
     try {
       await cache.add(archivo);
     } catch (e) {
-      console.error("❌ No se pudo cachear:", archivo);
+      console.error("No se pudo cachear:", archivo);
       
     }
   }
