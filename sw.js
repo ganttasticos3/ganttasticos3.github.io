@@ -1,8 +1,7 @@
 /* Este archivo debe estar colocado en la carpeta raíz del sitio. */
 
-const VERSION = "3.5.2";
+const VERSION = "3.5.3"; // Incrementamos para forzar actualización
 const CACHE = "pwamd";
-
 const URL_SERVIDOR = "https://ganttasticos3-github-io.onrender.com";
 
 const ARCHIVOS = [
@@ -50,6 +49,12 @@ const ARCHIVOS = [
   "fonts/roboto-v32-latin-regular.woff2",
 
   /* IMÁGENES */
+  "img/BALTA.png",
+  "img/HECTOR.png",
+  "img/ITATI.png",
+  "img/MENDIETA.png",
+  "img/ROBER.png",
+  "img/Vanne.png",
   "img/icono2048.png",
   "img/maskable_icon.png",
   "img/maskable_icon_x128.png",
@@ -103,13 +108,21 @@ const ARCHIVOS = [
 ];
 
 // ==============================
-// SERVICE WORKER BASE
+// CICLO DE VIDA (SERVICE WORKER)
 // ==============================
 
 if (self instanceof ServiceWorkerGlobalScope) {
   self.addEventListener("install", (evt) => {
-    console.log("SW instalando...");
+    console.log("SW: Instalando y cargando caché...");
+    // Fuerza al SW a saltar la espera y activarse de inmediato
+    self.skipWaiting();
     evt.waitUntil(llenaElCache());
+  });
+
+  self.addEventListener("activate", (evt) => {
+    console.log("SW: Activo y tomando control.");
+    // Toma control de las pestañas abiertas inmediatamente
+    evt.waitUntil(self.clients.claim());
   });
 
   self.addEventListener("fetch", (evt) => {
@@ -117,16 +130,14 @@ if (self instanceof ServiceWorkerGlobalScope) {
       evt.respondWith(buscaEnCache(evt));
     }
   });
-
-  self.addEventListener("activate", () => {
-    console.log("SW activo");
-  });
 }
 
 // ==============================
-// 💾 CACHE
+// 💾 GESTIÓN DE CACHÉ
 // ==============================
+
 async function llenaElCache() {
+  // Limpiamos versiones anteriores para no llenar el disco
   const keys = await caches.keys();
   for (const key of keys) {
     await caches.delete(key);
@@ -141,15 +152,16 @@ async function llenaElCache() {
       console.error("No se pudo cachear:", archivo);
     }
   }
-  console.log("Cache listo (versión individual):", VERSION);
+  console.log("Cache listo (v" + VERSION + ")");
 }
 
-// ESTA FUNCIÓN TE FALTABA:
 async function buscaEnCache(evt) {
   const cache = await caches.open(CACHE);
   const response = await cache.match(evt.request, { ignoreSearch: true });
+  // Si está en caché lo devuelve, si no, lo busca en internet
   return response || fetch(evt.request);
 }
+
 // ==============================
 // 🔔 PUSH NOTIFICATIONS
 // ==============================
@@ -179,7 +191,7 @@ self.addEventListener("push", (event) => {
       data: {
         url: URL_SERVIDOR,
       },
-    }),
+    })
   );
 });
 
@@ -198,6 +210,6 @@ self.addEventListener("notificationclick", (event) => {
         }
       }
       return self.clients.openWindow("/");
-    }),
+    })
   );
 });
