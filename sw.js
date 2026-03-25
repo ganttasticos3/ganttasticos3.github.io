@@ -127,27 +127,29 @@ if (self instanceof ServiceWorkerGlobalScope) {
 // 💾 CACHE
 // ==============================
 async function llenaElCache() {
-  
   const keys = await caches.keys();
   for (const key of keys) {
     await caches.delete(key);
   }
 
   const cache = await caches.open(CACHE);
-  
-  
+
   for (const archivo of ARCHIVOS) {
     try {
       await cache.add(archivo);
     } catch (e) {
       console.error("No se pudo cachear:", archivo);
-      
     }
   }
-
   console.log("Cache listo (versión individual):", VERSION);
 }
 
+// ESTA FUNCIÓN TE FALTABA:
+async function buscaEnCache(evt) {
+  const cache = await caches.open(CACHE);
+  const response = await cache.match(evt.request, { ignoreSearch: true });
+  return response || fetch(evt.request);
+}
 // ==============================
 // 🔔 PUSH NOTIFICATIONS
 // ==============================
