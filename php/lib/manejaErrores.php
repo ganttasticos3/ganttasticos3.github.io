@@ -25,8 +25,14 @@ set_exception_handler(function (Throwable $excepcion) {
 
 function devuelveProblemDetails(array $array)
 {
+ // 👇 AGREGAMOS ESTO PARA QUE SIEMPRE DE PERMISO A GITHUB, INCLUSO EN ERRORES
+ header("Access-Control-Allow-Origin: https://ganttasticos3.github.io");
+ header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+ header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+
  $json = json_encode($array);
  if ($json === false) {
+  // Aquí podrías agregar los headers también si tienes esta función
   devuelveResultadoNoJson();
  } else {
   http_response_code(isset($array["status"]) ? $array["status"] : 500);
