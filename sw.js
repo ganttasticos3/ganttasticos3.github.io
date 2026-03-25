@@ -1,6 +1,6 @@
 /* Este archivo debe estar colocado en la carpeta raíz del sitio. */
 
-const VERSION = "2.0";
+const VERSION = "3.0";
 const CACHE = "pwamd";
 
 const URL_SERVIDOR = "https://ganttasticos3-github-io.onrender.com";
@@ -9,8 +9,8 @@ const ARCHIVOS = [
   "ayuda.html",
   "favicon.ico",
   "index.html",
-  "select.html",
   "site.webmanifest",
+  "purga.php",
 
   /* CSS */
   "css/baseline.css",
@@ -88,7 +88,7 @@ const ARCHIVOS = [
   "js/lib/suscribeAPush.js",
   "js/lib/urlBase64ToUint8Array.js",
 
-  /* CUSTOM COMPONENTS */
+  /* CUSTOM */
   "js/lib/custom/md-app-bar.js",
   "js/lib/custom/md-options-menu.js",
   "js/lib/custom/md-select-menu.js",
@@ -96,7 +96,9 @@ const ARCHIVOS = [
   /* POLYFILL */
   "ungap/custom-elements.js",
 
+  /* ROOT */
   "/",
+  "sw.js",
 ];
 
 // ==============================
