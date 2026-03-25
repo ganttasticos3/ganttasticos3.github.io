@@ -68,7 +68,7 @@ const ARCHIVOS = [
   "img/Screenshot_vertical_1.jpeg",
   "img/Screenshot_horizontal_2.jpeg",
   "img/Screenshot_vertical_2.jpeg",
-
+"img/Escritorio.png",
   /* JS */
   "js/nav-tab-fixed.js",
   "js/lib/abreElementoHtml.js",
