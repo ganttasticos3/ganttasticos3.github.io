@@ -1,6 +1,7 @@
 <?php
 
-require_once __DIR__ . "/php/Bd.php";
+require_once __DIR__ . "/php/lib/Bd.php";
+
 $bd = Bd::pdo();
 
 if (isset($_GET["accion"])) {
